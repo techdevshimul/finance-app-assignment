@@ -1,0 +1,1 @@
+export const url = "https://shimuls-finance-app-default-rtdb.firebaseio.com"
