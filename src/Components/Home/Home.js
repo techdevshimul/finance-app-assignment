@@ -16,22 +16,24 @@ const Home = props => {
         props.loadAccounts();
     })
 
-    return (<View>
-        <View style={styles.container}>
-            <Image
-                source={tk}
-            />
-            <Text style={styles.desc}>This application allows you to put your finance in order: to save data of your incomes and expenses, easily find the corresponding record, provide balance and statistics for the period, the data can be sent to e-mail as an excel file. No ads or paid content. Created for myself, I have been using for more than a month. Good luck and financial well-being!
-            </Text>
-            <Pressable style={styles.btn}
-                onPress={() => {
-                    navigate("Accounts");
-                }}
-            >
-                <Text style={styles.txt}>Go To Accounts</Text>
-            </Pressable>
-        </View>
-    </View >
+    return (
+        <View>
+            <View style={styles.container}>
+                <Image
+                    source={tk}
+                    style={styles.image}
+                />
+                <Text style={styles.desc}>This application allows you to put your finance in order: to save data of your incomes and expenses, easily find the corresponding record, provide balance and statistics for the period, the data can be sent to e-mail as an excel file. No ads or paid content. Created for myself, I have been using for more than a month. Good luck and financial well-being!
+                </Text>
+                <Pressable style={styles.btn}
+                    onPress={() => {
+                        navigate("Accounts");
+                    }}
+                >
+                    <Text style={styles.txt}>Go To Accounts</Text>
+                </Pressable>
+            </View>
+        </View >
 
     )
 }
@@ -63,6 +65,9 @@ const styles = StyleSheet.create({
         textAlign: "justify",
         fontWeight: "bold",
         fontSize: 16,
-
+    },
+    image: {
+        width: "100%",
+        height: 300
     }
 })
